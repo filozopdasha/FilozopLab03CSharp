@@ -16,12 +16,5 @@ namespace FilozopLab03.UserInfoProject.Views
             _userInfoViewModel = new UserInfoViewModel();
             DataContext = _userInfoViewModel;
         }
-
-        private void SelectedDateChangedFromDatePicker(object sender, SelectionChangedEventArgs e)
-        {
-            DateTime? chosenDate = datePicker.SelectedDate;
-            if (chosenDate.HasValue)
-                _userInfoViewModel.Date = chosenDate.Value;
-        }
     }
 }

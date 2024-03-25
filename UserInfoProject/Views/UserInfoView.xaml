@@ -39,7 +39,7 @@
         <TextBlock Grid.Row="2" Grid.Column="0" Text="Email:" Margin="15,5,0,5" Foreground="Gray" FontSize="16"/>
         <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Email, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Margin="15,5,0,5" Height="30"/>
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Birth Date:" Margin="15,5,0,5" Foreground="Gray" FontSize="16"/>
-        <DatePicker Grid.Row="3" Grid.Column="1" Name="datePicker" Margin="15,5,0,5" SelectedDateFormat="Short" SelectedDateChanged="SelectedDateChangedFromDatePicker"/>
+        <DatePicker Grid.Row="3" Grid.Column="1" Margin="15,5,0,5" SelectedDate="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         <Button Grid.Row="4" Grid.Column="1" Name="BAboutBirthday" Content="Confirm" Margin="0,5,0,0" Height="30" Command="{Binding ProceedCommand}" IsEnabled="{Binding ProceedEnabled}" Width="125" Background="White">
             <Button.Style>
                 <Style TargetType="Button">
